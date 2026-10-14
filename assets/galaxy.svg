@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" fill="none">
+  <defs>
+    <radialGradient id="nebula">
+      <stop stop-color="#d6d6ff" stop-opacity=".5"/>
+      <stop offset=".25" stop-color="#b2a0e6" stop-opacity=".22"/>
+      <stop offset=".6" stop-color="#769ce2" stop-opacity=".09"/>
+      <stop offset="1" stop-color="#769ce2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="core">
+      <stop stop-color="#f3e8db" stop-opacity=".9"/>
+      <stop offset=".25" stop-color="#d4c4ef" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#b9a7ed" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="arm" x1="-150" y1="-100" x2="150" y2="100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#83a9ef" stop-opacity="0"/>
+      <stop offset=".45" stop-color="#c9b5ec" stop-opacity=".65"/>
+      <stop offset="1" stop-color="#83a9ef" stop-opacity=".1"/>
+    </linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="5"/></filter>
+  </defs>
+  <ellipse cx="240" cy="160" rx="208" ry="125" fill="url(#nebula)" transform="rotate(-25 240 160)"/>
+  <g transform="translate(240 160) rotate(-25) scale(1 .58)">
+    <g stroke="url(#arm)" stroke-width="16" stroke-linecap="round" filter="url(#soft)">
+      <path id="spiral" d="M0 0C-16-24-46-5-34 23C-15 68 81 62 99 5C128-83 5-137-92-85C-154-52-173 5-153 62"/>
+      <use href="#spiral" transform="rotate(180)"/>
+    </g>
+    <g stroke="#bba6df" stroke-opacity=".17" stroke-width="2" stroke-linecap="round">
+      <use href="#spiral"/>
+      <use href="#spiral" transform="rotate(180)"/>
+    </g>
+    <ellipse rx="61" ry="47" fill="url(#core)"/>
+  </g>
+  <g fill="#c0cfe9">
+    <circle cx="88" cy="111" r="1" opacity=".45"/>
+    <circle cx="134" cy="61" r="1.2" opacity=".6"/>
+    <circle cx="188" cy="97" r=".8" opacity=".5"/>
+    <circle cx="319" cy="64" r="1" opacity=".4"/>
+    <circle cx="389" cy="117" r="1.3" opacity=".65"/>
+    <circle cx="360" cy="203" r=".9" opacity=".45"/>
+    <circle cx="298" cy="250" r="1" opacity=".35"/>
+    <circle cx="134" cy="229" r="1.2" opacity=".5"/>
+    <circle cx="77" cy="192" r=".8" opacity=".4"/>
+  </g>
+  <path d="m354 84 1.4 5.6L361 91l-5.6 1.4L354 98l-1.4-5.6L347 91l5.6-1.4Z" fill="#d6dfff" opacity=".65"/>
+</svg>

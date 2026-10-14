@@ -55,7 +55,19 @@ svg { display: block; }
 .header-resume span { margin-left: 12px; }
 .section-inner { width: 100%; max-width: calc(var(--content-width) + var(--gutter) * 2); padding-inline: var(--gutter); margin-inline: auto; }
 .section-block { padding-block: var(--section-space); border-top: 1px solid var(--border); }
-.hero { padding-top: 27px; }
+.hero { position: relative; isolation: isolate; padding-top: 27px; }
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -36px;
+  right: var(--gutter);
+  width: clamp(180px, 30vw, 420px);
+  aspect-ratio: 1.5;
+  background: url("../assets/galaxy.svg") center / contain no-repeat;
+  opacity: .65;
+  pointer-events: none;
+}
 .file-path { display: flex; gap: 14px; color: var(--muted); font: 11px var(--mono); }
 .file-path .muted { margin-left: -14px; }
 .hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; align-items: center; gap: 32px; padding-top: 60px; padding-bottom: 65px; }
@@ -233,6 +245,7 @@ h2 { font-size: clamp(29px, 3.2vw, 43px); font-weight: 600; line-height: 1.22; l
   .header-resume { margin-left: auto; font-size: 10px; padding: 6px 11px; }
   .main-nav { order: 3; width: 100%; justify-content: space-between; margin: 0; padding-block: 10px 15px; border-bottom: 1px solid var(--border); gap: 16px; font-size: 12px; }
   .hero { padding-top: 26px; }
+  .hero::before { top: -12px; right: 8px; width: 180px; opacity: .5; }
   .file-path { font-size: 10px; }
   .hero-grid { grid-template-columns: 1fr; gap: 25px; padding-top: 40px; padding-bottom: 35px; }
   .eyebrow { font-size: 9px; letter-spacing: .07em; margin-bottom: 23px; }
