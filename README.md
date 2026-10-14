@@ -12,11 +12,11 @@ From the repository root, run `python -m http.server 8000` (or `py -m http.serve
 
 - **Introduction:** name, role, summary, primary actions, GitHub, and LinkedIn. Also update the `<title>`, description, and social metadata in `<head>` when changing the introduction.
 - **Work:** the featured Clexi article and the two employer work cards. Keep company attribution and dates; do not present employer work as a personal product. Update only resume-supported technologies and outcomes.
-- **Named projects:** LOVE STORY, Pikaap, and User Management System. The resume does not establish their employer, ownership, or dates; those details are intentionally omitted.
+- **Named projects:** LOVE STORY, Pikaap, and User Management System come from the resume. Zar Air's token and sale landing-page contribution was supplied by the portfolio owner. Unspecified employers, ownership, and dates are omitted.
 - **About:** biography, supported highlights, and education.
 - **Experience:** one `<li>` per role in `.timeline`, newest first. Keep dates and job titles consistent with the resume.
 - **Skills:** each `.skill-group` contains its own list. No scores or proficiency percentages.
-- **Contact:** use the resume email. Update every occurrence of an email or social URL together, including introduction links. The footer year updates with JavaScript and has a static fallback.
+- **Contact:** use the resume email. The Armenia-format phone number is an explicitly labeled example with a `tel:` link; replace both its displayed number and `href` with your real number before publishing. Update its accessible label too. Update every occurrence of an email or social URL together, including introduction links. The footer year updates with JavaScript and has a static fallback.
 
 Colors, font stacks, spacing, and widths are CSS variables at the top of `css/portfolio.css`. Responsive rules follow the main styles. `js/portfolio.js` only updates the year and active sidebar section. All navigation is standard section anchors; the desktop rail becomes a compact text navigation on mobile.
 
