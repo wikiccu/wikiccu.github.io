@@ -12,7 +12,7 @@ From the repository root, run `python -m http.server 8000` (or `py -m http.serve
 
 - **Introduction:** name, role, summary, primary actions, GitHub, and LinkedIn. Also update the `<title>`, description, and social metadata in `<head>` when changing the introduction.
 - **Work:** the featured Clexi article and the two employer work cards. Keep company attribution and dates; do not present employer work as a personal product. Update only resume-supported technologies and outcomes.
-- **Named projects:** LOVE STORY, Pikaap, and User Management System come from the resume. Zar Air's token and sale landing-page contribution was supplied by the portfolio owner. Unspecified employers, ownership, and dates are omitted.
+- **Named projects:** LOVE STORY, Pikaap, and User Management System come from the resume. Zar Air's token and sale landing-page contribution was supplied by the portfolio owner. Prolane and Biznes are the owner's open-source Go projects; their descriptions reflect their repository READMEs and distinguish current functionality from planned work. Unspecified employers, ownership, and dates are omitted.
 - **About:** biography, supported highlights, and education.
 - **Experience:** one `<li>` per role in `.timeline`, newest first. Keep dates and job titles consistent with the resume.
 - **Skills:** each `.skill-group` contains its own list. No scores or proficiency percentages.
