@@ -1,331 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link rel="icon" href="img/favicon.png" type="image/png" />
-  <title>Saeed Rostami's Personal website</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.css" />
-  <link rel="stylesheet" href="vendors/linericon/style.css" />
-  <link rel="stylesheet" href="css/font-awesome.min.css" />
-  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" />
-  <link rel="stylesheet" href="css/magnific-popup.css" />
-  <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css" />
-  <!-- main css -->
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17191e">
+  <title>Saeed Rostami — Senior Software Engineer</title>
+  <meta name="description" content="Saeed Rostami is a senior software engineer with 10+ years of experience in backend architecture, distributed systems, and real-time communication.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Saeed Rostami — Senior Software Engineer">
+  <meta property="og:description" content="Reliable backends. Connected systems. Explore selected engineering work, projects, and experience.">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Saeed Rostami — Senior Software Engineer">
+  <meta name="twitter:description" content="Backend architecture, distributed systems, and real-time communication. Selected work by Saeed Rostami.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <script src="js/portfolio.js" defer></script>
 </head>
-
 <body>
-  <!--================ Start Header Area =================-->
-  <header class="header_area">
-    <div class="main_menu">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" width="125px" alt="" /></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-            <ul class="nav navbar-nav menu_nav justify-content-end">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="services.html">Skills </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-            </ul>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <aside class="activity-rail" aria-label="Quick navigation">
+    <a class="rail-brand" href="#home" aria-label="Saeed Rostami, home">&lt;/&gt;</a>
+    <nav aria-label="Section shortcuts">
+      <a href="#home" aria-label="Introduction" aria-current="location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10H3zM9 20v-7h6v7"/></svg><span class="rail-tooltip">Introduction</span></a>
+      <a href="#work" aria-label="Selected work"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span class="rail-tooltip">Selected work</span></a>
+      <a href="#about" aria-label="About"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg><span class="rail-tooltip">About</span></a>
+      <a href="#experience" aria-label="Experience"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V3h8v4M3 12a22 22 0 0 0 18 0M12 11v4"/></svg><span class="rail-tooltip">Experience</span></a>
+      <a href="#skills" aria-label="Skills"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 6-5 6 5 6m10-12 5 6-5 6M14 3l-4 18"/></svg><span class="rail-tooltip">Skills</span></a>
+      <a href="#contact" aria-label="Contact"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span class="rail-tooltip">Contact</span></a>
+    </nav>
+    <span class="rail-bottom" aria-hidden="true">SR</span>
+  </aside>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="Saeed Rostami, home">saeed<span class="muted">.rostami</span><span class="accent">_</span></a>
+      <nav class="main-nav" aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#contact">Contact <span aria-hidden="true">↗</span></a></nav>
+      <a class="header-resume" href="SaeedGoharrostamiResume.pdf" download="SaeedRostamiResume.pdf">Resume <span aria-hidden="true">↓</span></a>
+    </header>
+    <main id="main">
+      <!-- INTRODUCTION: name, title, summary, and primary links. -->
+      <section class="hero section-inner" id="home" aria-labelledby="intro-title">
+        <div class="file-path"><span class="accent">portfolio</span><span aria-hidden="true">/</span> introduction<span class="muted">.md</span></div>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="small-line" aria-hidden="true"></span> Thoughtful code. Lasting impact.</p>
+            <h1 id="intro-title">Saeed<br>Rostami<span class="accent">.</span></h1>
+            <p class="hero-role">Senior Software Engineer</p>
+            <p class="hero-description">I build the systems behind the experience.<br class="desktop-break"> Reliable backends, distributed architectures, and real-time connections that work at scale.</p>
+            <div class="hero-actions"><a class="button button-primary" href="#work">Explore my work <span aria-hidden="true">↗</span></a><a class="text-link" href="SaeedGoharrostamiResume.pdf" download="SaeedRostamiResume.pdf">Download resume <span aria-hidden="true">↓</span></a></div>
+            <div class="hero-socials"><span class="mono muted">Find me on</span><a href="https://github.com/wikiccu">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/saeedrostami/">LinkedIn <span aria-hidden="true">↗</span></a></div>
+          </div>
+          <div class="hero-visual" role="img" aria-label="Engineering focus: backend systems, cloud architecture, and real-time communication">
+            <div class="visual-orbit" aria-hidden="true"></div>
+            <div class="code-panel" aria-hidden="true">
+              <div class="code-tab"><span class="ts-icon">TS</span> engineer.ts <span class="code-tab-mark">{ }</span></div>
+              <div class="code-body">
+                <div><span class="line-number">01</span><span class="syntax-comment">// A little about how I work</span></div>
+                <div><span class="line-number">02</span><span class="syntax-purple">const</span> <span class="syntax-blue">engineer</span> = {</div>
+                <div><span class="line-number">03</span>&nbsp; name: <span class="syntax-orange">'Saeed Rostami'</span>,</div>
+                <div><span class="line-number">04</span>&nbsp; focus: [</div>
+                <div><span class="line-number">05</span>&nbsp; &nbsp; <span class="syntax-orange">'Backend systems'</span>,</div>
+                <div><span class="line-number">06</span>&nbsp; &nbsp; <span class="syntax-orange">'Cloud architecture'</span>,</div>
+                <div><span class="line-number">07</span>&nbsp; &nbsp; <span class="syntax-orange">'Real-time communication'</span></div>
+                <div><span class="line-number">08</span>&nbsp; ],</div>
+                <div><span class="line-number">09</span>&nbsp; approach: <span class="syntax-orange">'Build. Refine. Scale.'</span></div>
+                <div><span class="line-number">10</span>};</div>
+              </div>
+              <div class="code-footer"><span><span class="syntax-green">✓</span> Built on experience</span><span>TypeScript</span></div>
+            </div>
+            <div class="focus-note"><span class="focus-symbol" aria-hidden="true">⌘</span><div><span class="mono muted">THE FOCUS</span><p>Complex systems.<br><strong>Clear solutions.</strong></p></div></div>
           </div>
         </div>
-      </nav>
-    </div>
-  </header>
-  <!--================ End Header Area =================-->
-
-  <!--================ Start Home Banner Area =================-->
-  <section class="home_banner_area">
-    <div class="banner_inner">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-7">
-            <div class="banner_content">
-              <h3 class="text-uppercase">hi i'm</h3>
-              <h1 class="text-uppercase">Saeed Rostami</h1>
-              <h5 class="text-uppercase">
-                Senior Back-end Node.js Developer
-              </h5>
-              <div class="d-flex align-items-center">
-                <a class="primary_btn" target="_blank" href="https://www.linkedin.com/in/saeedrostami
-"><span>Hire Me</span></a>
-                <a class="primary_btn tr-bg" href="SaeedGoharrostamiResume.pdf"><span>Get CV</span></a>
-              </div>
+        <div class="hero-bottom"><p class="mono"><span class="accent">Node.js</span><span>/</span> TypeScript <span>/</span> AWS &amp; GCP</p><a href="#work" class="scroll-link">Scroll to explore <span aria-hidden="true">↓</span></a></div>
+      </section>
+      <!-- WORK: employer projects; never imply these are personal products. -->
+      <section class="work-section section-block" id="work" aria-labelledby="work-title">
+        <div class="section-inner">
+          <div class="section-heading"><div><p class="section-label"><span>01</span> / SELECTED WORK</p><h2 id="work-title">Behind the interface.</h2></div><p>Production systems. Real constraints.<br>Engineering that makes a difference.</p></div>
+          <article class="featured-work">
+            <div class="system-visual">
+              <div class="visual-label"><span class="status-dot" aria-hidden="true"></span> DEVICE CONTROL / SYSTEM OVERVIEW</div>
+              <svg class="system-diagram" viewBox="0 0 480 285" role="img" aria-labelledby="system-title system-desc">
+                <title id="system-title">Conceptual device management architecture</title><desc id="system-desc">Device control connects through REST APIs to Firebase real-time synchronization, hosted on Google Cloud. This illustrates technologies in the resume, not an exact production topology.</desc>
+                <defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#303b4a"/></pattern><linearGradient id="connector"><stop stop-color="#6aaeff"/><stop offset="1" stop-color="#b29bf7"/></linearGradient></defs>
+                <rect width="480" height="285" fill="url(#dots)"/>
+                <g fill="none" stroke="url(#connector)" stroke-width="1.5"><path d="M111 141H187M293 141H369M240 89V54H369V107M240 193V230H111V175"/><circle cx="149" cy="141" r="4" fill="#91bdff"/><circle cx="331" cy="141" r="4" fill="#b29bf7"/></g>
+                <g fill="#202934" stroke="#45586e"><rect x="43" y="107" width="92" height="68" rx="10"/><rect x="187" y="89" width="106" height="104" rx="12"/><rect x="345" y="107" width="92" height="68" rx="10"/></g>
+                <g fill="none" stroke="#90baff" stroke-width="1.7"><rect x="75" y="121" width="28" height="17" rx="3"/><path d="M80 143h18M88 138v5M233 120l-9 9 9 9M247 120l9 9-9 9M242 118l-4 22"/></g>
+                <path d="m390 119-10 17h10l-3 10 15-21h-11l3-6" fill="#c6acf6"/>
+                <g fill="#d4deeb" font-family="Consolas, monospace" font-size="11" text-anchor="middle"><text x="89" y="161">DEVICES</text><text x="240" y="166">REST APIs</text><text x="391" y="161">FIREBASE</text><text x="369" y="43" fill="#9aadc3">GCP</text><text x="111" y="253" fill="#9aadc3">REAL-TIME SYNC</text></g>
+              </svg>
+              <span class="diagram-caption mono">Conceptual system diagram</span>
+              <div class="visual-metrics"><div><strong>50<span>%</span></strong><span>less execution time</span></div><div><strong>125<span>+</span></strong><span>managed devices</span></div></div>
             </div>
+            <div class="featured-copy"><p class="project-context">CLEXI CO. <span>2023–2026</span></p><h3>Secure SSD<br>management platform<span class="accent">.</span></h3><p>A platform for remotely managing encrypted devices, with real-time control and an admin dashboard.</p><p class="contribution"><span>MY CONTRIBUTION</span>Led full-stack development, re-architected the backend, and built REST APIs with Firebase synchronization. Improved performance through caching and rate-limiting.</p><ul class="tags" aria-label="Documented technologies"><li>GCP</li><li>REST APIs</li><li>Firebase</li><li>CI/CD</li></ul><a class="text-link" href="#experience">View experience <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <div class="work-grid">
+            <article class="work-card"><div class="card-top"><span class="project-index">02 /</span><span class="project-context">VIRAFARIN CO. · 2026–PRESENT</span></div><span class="work-icon purple" aria-hidden="true">{ }</span><h3>Access, with boundaries.</h3><p class="work-subtitle">Employee &amp; organizational CRM</p><p>Contributing to a large-scale CRM built on distributed microservices. Designed company-scoped roles and permissions, and improved authentication, authorization, and tenant isolation.</p><ul class="tags" aria-label="Areas of work"><li>Microservices</li><li>Access control</li><li>API design</li></ul></article>
+            <article class="work-card"><div class="card-top"><span class="project-index">03 /</span><span class="project-context">VOLVERO CO. · 2022–2023</span></div><span class="work-icon blue" aria-hidden="true">↗</span><h3>A smoother road to booking.</h3><p class="work-subtitle">Cloud-native car rental platform</p><p>Designed a platform for bookings, identity verification, payments, and fleet management. Built a microservices backend and reduced booking response time by 40%.</p><ul class="tags" aria-label="Documented technologies"><li>AWS</li><li>REST APIs</li><li>CloudWatch</li></ul></article>
           </div>
-          <div class="col-lg-5">
-            <div class="home_right_img">
-              <img class="" src="img/banner/home-right.png" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--================ End Home Banner Area =================-->
-
-  <!--================ Start About Us Area =================-->
-  <section class="about_area section_gap">
-    <div class="container">
-      <div class="row justify-content-start align-items-center">
-        <div class="col-lg-5">
-          <div class="about_img">
-            <img class="" src="img/about-us.png" alt="" />
+          <!-- NAMED PROJECTS: the resume does not specify employer or ownership. -->
+          <div class="project-list-heading"><h3>More from my project work</h3><p>Backend contributions across different domains.</p></div>
+          <div class="project-list">
+            <article class="project-row"><span class="project-index">01</span><div><h4>LOVE STORY <span>Dating platform</span></h4><p>Built the backend, APIs, and matching logic for a platform focused on long-term connections and personalization.</p></div><a class="text-link" href="https://play.google.com/store/apps/details?id=com.lovestory.unicorn&amp;hl=en" aria-label="View LOVE STORY on Google Play">Google Play <span aria-hidden="true">↗</span></a></article>
+            <article class="project-row"><span class="project-index">02</span><div><h4>Pikaap <span>Real-time transport system</span></h4><p>Developed WebSocket APIs for fleet tracking and ride dispatch, supporting low-latency communication between drivers and passengers.</p></div><span class="project-technology mono">WebSocket</span></article>
+            <article class="project-row"><span class="project-index">03</span><div><h4>User Management System</h4><p>Designed access-control APIs for sensitive organizational data, with role-based authorization and data isolation.</p></div><span class="project-technology mono">Access control</span></article>
           </div>
         </div>
-
-        <div class="offset-lg-1 col-lg-5">
-          <div class="main_title text-left">
-            <h2>
-              let’s <br />
-              Introduce about <br />
-              myself
-            </h2>
-            <p>
-              Whose given. Were gathered. There first subdue greater. Bearing
-              you Whales heaven midst their. Beast creepeth. Fish days.
-            </p>
-            <p>
-              Is give may shall likeness made yielding spirit a itself
-              together created after sea is in beast beginning signs open god
-              you're gathering whose gathered cattle let. Creature whales
-              fruit unto meat the life beginning all in under give two.
-            </p>
-            <a class="primary_btn" href="SaeedGoharrostamiResume.pdf"><span>Download CV</span></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--================ End About Us Area =================-->
-
-  <!--================ Srart Brand Area =================-->
-  <section class="brand_area section_gap_bottom">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-6">
-          <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-6">
-              <div class="single-brand-item d-table">
-                <div class="d-table-cell text-center">
-                  <img src="img/brands/logo1.png" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-              <div class="single-brand-item d-table">
-                <div class="d-table-cell text-center">
-                  <img src="img/brands/logo2.png" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-              <div class="single-brand-item d-table">
-                <div class="d-table-cell text-center">
-                  <img src="img/brands/logo3.png" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-              <div class="single-brand-item d-table">
-                <div class="d-table-cell text-center">
-                  <img src="img/brands/logo4.png" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-              <div class="single-brand-item d-table">
-                <div class="d-table-cell text-center">
-                  <img src="img/brands/logo5.png" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-              <div class="single-brand-item d-table">
-                <div class="d-table-cell text-center">
-                  <img src="img/brands/logo6.png" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-              <div class="single-brand-item d-table">
-                <div class="d-table-cell text-center">
-                  <img src="img/brands/logo7.png" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-              <div class="single-brand-item d-table">
-                <div class="d-table-cell text-center">
-                  <img src="img/brands/logo8.png" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-              <div class="single-brand-item d-table">
-                <div class="d-table-cell text-center">
-                  <img src="img/brands/logo9.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="offset-lg-2 col-lg-4 col-md-6">
-          <div class="client-info">
-            <div class="d-flex mb-50">
-              <span class="lage">10</span>
-              <span class="smll">Years Experience Working</span>
-            </div>
-            <div class="call-now d-flex">
-              <div>
-                <span class="fa fa-phone"></span>
-              </div>
-              <div class="ml-15">
-                <p>call me now</p>
-                <h4>(+98)-933-263-6994</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--================ End Brand Area =================-->
-
-  <!--================ Start Features Area =================-->
-  <section class="features_area">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
-          <div class="main_title">
-            <h2>service offers</h2>
-            <p>
-              Is give may shall likeness made yielding spirit a itself togeth
-              created after sea <br />
-              is in beast beginning signs open god you're gathering ithe
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="row feature_inner">
-        <div class="col-lg-3 col-md-6">
-          <div class="feature_item">
-            <img src="img/services/s1.png" alt="" />
-            <h4>Wp developing</h4>
-            <p>
-              Creeping for female light years that lesser can't evening heaven
-              isn't bearing tree
-            </p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="feature_item">
-            <img src="img/services/s2.png" alt="" />
-            <h4>UI/ux design</h4>
-            <p>
-              Creeping for female light years that lesser can't evening heaven
-              isn't bearing tree
-            </p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="feature_item">
-            <img src="img/services/s3.png" alt="" />
-            <h4>Web design</h4>
-            <p>
-              Creeping for female light years that lesser can't evening heaven
-              isn't bearing tree
-            </p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="feature_item">
-            <img src="img/services/s4.png" alt="" />
-            <h4>seo optimize</h4>
-            <p>
-              Creeping for female light years that lesser can't evening heaven
-              isn't bearing tree
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--================ End Features Area =================-->
-  <!--================Footer Area =================-->
-  <footer class="footer_area">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-12">
-          <div class="footer_top flex-column">
-            <div class="footer_logo">
-              <a href="#">
-                <img src="img/logo.png" width="125px" alt="" />
-              </a>
-              <h4>Follow Me</h4>
-            </div>
-          <div class="footer_social">
-            <a href="https://www.instagram.com/0x5aeed/" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/saeedrostami/" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
-          </div>
-          </div>
-        </div>
-      </div>
-      <div class="row footer_bottom justify-content-center">
-        <p class="col-lg-8 col-sm-12 footer-text">
-          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-          Copyright &copy;
-          <script>
-            document.write(new Date().getFullYear())
-          </script>
-          All rights reserved | This template is made with
-          <i class="fa fa-heart-o" aria-hidden="true"></i> by
-          <a href="https://colorlib.com" target="_blank">Colorlib</a>
-          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        </p>
-      </div>
-    </div>
-  </footer>
-  <!--================End Footer Area =================-->
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/stellar.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-  <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-  <script src="vendors/isotope/isotope-min.js"></script>
-  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-  <script src="js/jquery.ajaxchimp.min.js"></script>
-  <script src="js/mail-script.js"></script>
-  <!--gmaps Js-->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-  <script src="js/gmaps.min.js"></script>
-  <script src="js/theme.js"></script>
+      </section>
+      <!-- ABOUT: biography, supported highlights, and education. -->
+      <section class="about-section section-block" id="about" aria-labelledby="about-title">
+        <div class="section-inner about-grid"><div><p class="section-label"><span>02</span> / ABOUT ME</p><h2 id="about-title">The details matter.<br>So does the bigger picture.</h2><div class="about-text"><p>I’m Saeed, a software engineer with more than a decade of experience building backend systems. My work spans real-time transport, secure device management, and the business platforms that organizations depend on.</p><p>I work across API design, distributed services, and cloud infrastructure, connecting decisions in the code to reliability in production. Along the way, I’ve led development, mentored junior engineers, and helped teams improve how they build software.</p></div><a class="text-link" href="SaeedGoharrostamiResume.pdf" download="SaeedRostamiResume.pdf">The full story, in my resume <span aria-hidden="true">↓</span></a></div><div class="about-facts"><div class="fact"><strong>10<span>+</span></strong><p>years of experience<br><span>Backend &amp; full-stack engineering</span></p></div><div class="fact"><strong>1,000<span>+</span></strong><p>concurrent users supported<br><span>WebRTC communication at Pejvak</span></p></div><div class="education"><span class="mono accent">EDUCATION</span><h3>Bachelor of Software Engineering</h3><p>Jabir Ibn Hayyan <span>2012–2014</span></p><h3>Associate of Software Engineering</h3><p>Mollasadra Technical University <span>2010–2012</span></p></div></div></div>
+      </section>
+      <!-- EXPERIENCE: keep employer names, titles, and dates aligned with resume. -->
+      <section class="experience-section section-block" id="experience" aria-labelledby="experience-title"><div class="section-inner"><div class="section-heading"><div><p class="section-label"><span>03</span> / EXPERIENCE</p><h2 id="experience-title">A career in building.</h2></div><a class="text-link" href="SaeedGoharrostamiResume.pdf" download="SaeedRostamiResume.pdf">Download full resume <span aria-hidden="true">↓</span></a></div>
+        <ol class="timeline">
+          <li><div class="timeline-date"><span class="timeline-dot current" aria-hidden="true"></span>2026–Present<span class="current-label">CURRENT</span></div><div class="timeline-role"><h3>Senior Software Engineer</h3><p>Virafarin Co.</p></div><p class="timeline-description">Building a distributed CRM platform, company-scoped permissions, and secure authentication workflows. Improving service communication and backend architecture.</p></li>
+          <li><div class="timeline-date"><span class="timeline-dot" aria-hidden="true"></span>2023–2026</div><div class="timeline-role"><h3>Senior Software Engineer</h3><p>Clexi Co.</p></div><p class="timeline-description">Led a secure device management platform on GCP. Reduced backend execution time by 50%, API latency and database load by 40%, and operational costs by 25%.</p></li>
+          <li><div class="timeline-date"><span class="timeline-dot" aria-hidden="true"></span>2022–2023</div><div class="timeline-role"><h3>Senior Software Engineer</h3><p>Volvero Co.</p></div><p class="timeline-description">Designed a cloud-native rental platform on AWS with secure booking, payments, and KYC. Improved response times and reduced booking failures through service optimization.</p></li>
+          <li><div class="timeline-date"><span class="timeline-dot" aria-hidden="true"></span>2019–2022</div><div class="timeline-role"><h3>Senior Full-Stack Developer</h3><p>Pejvak Co.</p></div><p class="timeline-description">Led backend and real-time architecture for ride-hailing. Built WebRTC communication for 1,000+ concurrent users, maintained microservices, and mentored junior engineers.</p></li>
+          <li><div class="timeline-date"><span class="timeline-dot" aria-hidden="true"></span>2017–2019</div><div class="timeline-role"><h3>Full-Stack Developer</h3><p>Novin Pardazesh Co.</p></div><p class="timeline-description">Developed RESTful APIs with Node.js, TypeScript, and Express. Improved system performance by 20% through query optimization and efficient API design.</p></li>
+          <li><div class="timeline-date"><span class="timeline-dot" aria-hidden="true"></span>2011–2017</div><div class="timeline-role"><h3>Back-End Developer</h3><p>Freelancer</p></div><p class="timeline-description">Delivered 50+ backend systems for startups and SMEs, with an emphasis on performance, security, reliability, and event-driven messaging.</p></li>
+        </ol>
+      </div></section>
+      <!-- SKILLS: documented tools, grouped without proficiency scores. -->
+      <section class="skills-section section-block" id="skills" aria-labelledby="skills-title"><div class="section-inner"><div class="section-heading"><div><p class="section-label"><span>04</span> / TOOLKIT</p><h2 id="skills-title">The right tools for the system.</h2></div><p>From the API to the infrastructure.</p></div><div class="skills-grid">
+        <div class="skill-group"><span class="skill-symbol blue" aria-hidden="true">&lt;/&gt;</span><h3>Languages &amp; frameworks</h3><ul><li>Node.js</li><li>TypeScript</li><li>Express.js</li><li>NestJS</li><li>Next.js</li><li>Gin</li></ul></div>
+        <div class="skill-group"><span class="skill-symbol purple" aria-hidden="true">[ : ]</span><h3>Data &amp; messaging</h3><ul><li>PostgreSQL</li><li>MongoDB</li><li>Redis</li><li>RabbitMQ</li><li>Kafka</li></ul></div>
+        <div class="skill-group"><span class="skill-symbol orange" aria-hidden="true">{~}</span><h3>Cloud &amp; delivery</h3><ul><li>AWS</li><li>GCP</li><li>Docker</li><li>Kubernetes</li><li>CI/CD</li><li>CloudWatch</li></ul></div>
+        <div class="skill-group"><span class="skill-symbol green" aria-hidden="true">↔</span><h3>Real-time &amp; APIs</h3><ul><li>WebSocket</li><li>WebRTC</li><li>Socket.IO</li><li>REST APIs</li><li>Firebase</li></ul></div>
+      </div></div></section>
+      <!-- CONTACT: resume email takes precedence over the previous site. -->
+      <section class="contact-section section-block" id="contact" aria-labelledby="contact-title"><div class="section-inner"><p class="section-label"><span>05</span> / CONTACT</p><div class="contact-grid"><div><h2 id="contact-title">Good software starts<br>with a conversation<span class="accent">.</span></h2><p>Have a software challenge in mind?<br>I’d be glad to hear about it.</p><a class="contact-email" href="mailto:privatemx.2010@gmail.com">privatemx.2010@gmail.com <span aria-hidden="true">↗</span></a></div><div class="contact-links"><a href="mailto:privatemx.2010@gmail.com"><span><span class="mono muted">01 /</span> Send an email</span><span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/saeedrostami/"><span><span class="mono muted">02 /</span> LinkedIn</span><span aria-hidden="true">↗</span></a><a href="https://github.com/wikiccu"><span><span class="mono muted">03 /</span> GitHub</span><span aria-hidden="true">↗</span></a></div></div></div></section>
+    </main>
+    <footer class="site-footer"><a class="wordmark" href="#home">saeed<span class="muted">.rostami</span><span class="accent">_</span></a><p>© <span id="year">2026</span> Saeed Rostami</p><a href="#home">Back to top <span aria-hidden="true">↑</span></a></footer>
+    <div class="status-bar" aria-hidden="true"><span>⌘ &nbsp; portfolio</span><span>Thoughtfully built. &nbsp; / &nbsp; HTML · CSS · JS</span></div>
+  </div>
 </body>
-
 </html>
